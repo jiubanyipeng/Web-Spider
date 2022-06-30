@@ -2,7 +2,6 @@ import requests
 import random
 from lxml import etree
 import time
-from ast import literal_eval
 import os
 
 

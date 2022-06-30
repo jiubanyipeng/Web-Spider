@@ -3,7 +3,7 @@ import requests
 import ast
 import csv
 
-
+# 个人的网站，仅给出参考，我是自己在本地测试的，测试好直接上传都服务器
 # 书名与id
 def name_id_dict():
     with open("书名与id数据.csv") as f:
@@ -37,15 +37,7 @@ def uploading_post(name, id):
                    'Accept-Encoding': 'gzip, deflate', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
                    'X-Requested-With': 'XMLHttpRequest', 'Content-Length': '', 'Origin': 'http://xs.test.jiubanyipeng.com',
                    'Connection': 'close', 'Referer': 'http://xs.test.jiubanyipeng.com/admin/novel/add.html'}
-        cookies = {
-            '__gads': 'ID=9d6acc78d6e49d77-22a8f47664d10099:T=1648354355:RT=1648354355:S=ALNI_Ma4I4e8jI6axgiP5trVSGBwkWqV3Q',
-            'Hm_lvt_df913e727ebd74ef13c9422906c60c28': '1654524625,1654564386,1655216734,1655287902',
-            '__gpi': 'UID=00000484cc6b9cbf:T=1649165167:RT=1653020444:S=ALNI_MZjr7CNBTdPaG4_gar2Pgt31fgrAQ',
-            'lf___forward__': '%2F',
-            'Hm_lvt_526d40d97ad4d118e4f1a7c1ddd01f60': '1655290883',
-            'Hm_lpvt_526d40d97ad4d118e4f1a7c1ddd01f60': '1656311112',
-            'PHPSESSID': 'it5kllut9481a3ree2o96fdm71'
-            }
+        cookies = {}
         url = 'http://xs.test.jiubanyipeng.com/admin/novel_chapter/import.html'
         r = requests.post(url, headers=headers, data=payload, cookies=cookies)
         r.encoding = 'utf-8'

@@ -3,9 +3,9 @@ import requests
 import random
 from lxml import etree
 import time
-from ast import literal_eval
 
 
+# 没有完成，ajax没有做好，有时间再说
 # User-Agent
 user_agent = [
     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1"

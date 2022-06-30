@@ -2,9 +2,11 @@
 import requests
 import random
 from lxml import etree
-import time
 from ast import literal_eval
 import os
+
+
+# 个人的网站上传数据
 
 # User-Agent
 user_agent = [
@@ -265,14 +267,7 @@ def up_run(payload):
                    'X-Requested-With': 'XMLHttpRequest', 'Content-Length': '', 'Origin': 'http://xs.jiubanyipeng.com',
                    'Connection': 'close', 'Referer': 'http://xs.jiubanyipeng.com/admin/novel/add.html'}
 
-        cookies = {'__gads': 'ID=9d6acc78d6e49d77-22a8f47664d10099:T=1648354355:RT=1648354355:S=ALNI_Ma4I4e8jI6axgiP5trVSGBwkWqV3Q',
-                   'Hm_lvt_df913e727ebd74ef13c9422906c60c28': '1654524625,1654564386,1655216734,1655287902',
-                   '__gpi': 'UID=00000484cc6b9cbf:T=1649165167:RT=1653020444:S=ALNI_MZjr7CNBTdPaG4_gar2Pgt31fgrAQ',
-                   'lf___forward__': '%2F',
-                   'Hm_lvt_526d40d97ad4d118e4f1a7c1ddd01f60': '1656311112',
-                   'Hm_lpvt_526d40d97ad4d118e4f1a7c1ddd01f60': '1656311112',
-                   'PHPSESSID': 'n7uh9aqths6os97ioc10eo80r6'
-                   }
+        cookies = {}
 
         r = requests.post(url, headers=headers, data=payload, cookies=cookies)
         return r.text
