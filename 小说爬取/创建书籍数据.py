@@ -179,7 +179,7 @@ def sanqi_info(url):
         if_data = get_url_utf8(url)
         if if_data.get('mes'):
             data = if_data.get('data')
-            img = 'https://www.777zw.ne' + ''.join(data.xpath('//div[@class="imgbox"]/img/@src'))
+            img = ''.join(data.xpath('//div[@class="imgbox"]/img/@src'))
             name = ''.join(data.xpath('//div[@class="info"]/div/h1/text()'))
             author = data.xpath('//div[@class="info"]/div/div/p/text()')[0].split('者：')[1]
             content = ''.join(data.xpath('//div[@class="info"]/div[@class="desc xs-hidden"]/text()'))
