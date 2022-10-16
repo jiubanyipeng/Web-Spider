@@ -3,9 +3,9 @@ import time
 import json
 import os
 
-CLIENT_ID = 'pPPmslqZn2D91SAT8UFYm84hKrpxHvXz'    # API Key
-CLIENT_SECRET = 'VVbZElaz8mHMPmIPjpxRn5zj79VHG1hB'  # Secret Key
-siteId = '17786714'    # 站点的id
+CLIENT_ID = 'pPPmslzxxxxxxxxxxxxhKrpxHvXz'    # API Key
+CLIENT_SECRET = 'VVbZElazxxxxxxxx5zj79VHG1hB'  # Secret Key
+siteId = '000000'    # 你站点的id
 
 home_time = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
 stop_time = int(home_time.split(' ')[0].replace('-', '')) - 0     # 结束时间  减 0 是当天的时间，减 1 是昨天，减 2 是前天
@@ -18,7 +18,7 @@ CODE = '215e190fa1ce17575f275a8db3e5cf98'  # 注意：以下的操作，当操�
 
 if len(CODE) < 15:
     print('CODE值有误，请重新填写')
-    time.sleep(10000)
+    time.sleep(10)
 
 global ACCESS_TOKEN, REFRESH_TOKEN      # ACCESS_TOKEN的有效期为一个月, REFRESH_TOKEN是当ACCESS_TOKEN过期用来重新刷新使用的，有效期十年
 
